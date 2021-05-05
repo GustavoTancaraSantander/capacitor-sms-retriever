@@ -1,10 +1,17 @@
 # capacitor-sms-retriever
 
-Android SMS Retriever API for Capacitor.
+With the [SMS Retriever API](https://developers.google.com/identity/sms-retriever/overview), you can perform SMS-based user verification in your Android app automatically, without requiring the user to manually type verification codes, and without requiring any extra app permissions.
 
 <img src="https://img.shields.io/npm/v/capacitor-sms-retriever" />
 <img src="https://img.shields.io/npm/dm/capacitor-sms-retriever" />
 <img src="https://img.shields.io/npm/l/capacitor-sms-retriever" />
+
+<br/>
+<br/>
+
+<p align="center">
+<img src="sms-retriever-demo.gif" height="500">
+</p>
 
 ## Install
 
