@@ -21,7 +21,7 @@ npx cap sync
 * [`requestPhoneNumber()`](#requestphonenumber)
 * [`startSmsReceiver()`](#startsmsreceiver)
 * [`removeSmsReceiver()`](#removesmsreceiver)
-* [`addListener('onSmsReceive', ...)`](#addlisteneronsmsreceive-)
+* [`addListener(...)`](#addlistener)
 * [Interfaces](#interfaces)
 
 </docgen-index>
@@ -32,7 +32,7 @@ npx cap sync
 ### getAppSignature()
 
 ```typescript
-getAppSignature() => Promise<AppSignature>
+getAppSignature() => any
 ```
 
 This is a helper method to generate your message hash to be included in your SMS message.
@@ -40,7 +40,7 @@ Without the correct hash, your app won't receive the message callback. This only
 
 Note: Do not use hash strings dynamically computed on the client in your verification messages.
 
-**Returns:** <code>Promise&lt;<a href="#appsignature">AppSignature</a>&gt;</code>
+**Returns:** <code>any</code>
 
 **Since:** 0.1.0
 
@@ -50,12 +50,12 @@ Note: Do not use hash strings dynamically computed on the client in your verific
 ### requestPhoneNumber()
 
 ```typescript
-requestPhoneNumber() => Promise<HintPhoneNumber>
+requestPhoneNumber() => any
 ```
 
 Initiate hint picker to prompt the user to choose from the phone numbers stored on the device.
 
-**Returns:** <code>Promise&lt;<a href="#hintphonenumber">HintPhoneNumber</a>&gt;</code>
+**Returns:** <code>any</code>
 
 **Since:** 0.1.0
 
@@ -65,12 +65,12 @@ Initiate hint picker to prompt the user to choose from the phone numbers stored 
 ### startSmsReceiver()
 
 ```typescript
-startSmsReceiver() => Promise<RegisterReceiver>
+startSmsReceiver() => any
 ```
 
 Start to listen for SMS messages.
 
-**Returns:** <code>Promise&lt;<a href="#registerreceiver">RegisterReceiver</a>&gt;</code>
+**Returns:** <code>any</code>
 
 **Since:** 0.1.0
 
@@ -80,17 +80,19 @@ Start to listen for SMS messages.
 ### removeSmsReceiver()
 
 ```typescript
-removeSmsReceiver() => Promise<void>
+removeSmsReceiver() => any
 ```
 
 Stop to listen for SMS messages.
+
+**Returns:** <code>any</code>
 
 **Since:** 0.1.0
 
 --------------------
 
 
-### addListener('onSmsReceive', ...)
+### addListener(...)
 
 ```typescript
 addListener(eventName: 'onSmsReceive', listenerFunc: (receivedMessage: ReceivedMessage) => void) => Promise<PluginListenerHandle> & PluginListenerHandle
@@ -100,10 +102,10 @@ Listen for when SMS is coming
 
 | Param              | Type                                                                                      |
 | ------------------ | ----------------------------------------------------------------------------------------- |
-| **`eventName`**    | <code>'onSmsReceive'</code>                                                               |
+| **`eventName`**    | <code>"onSmsReceive"</code>                                                               |
 | **`listenerFunc`** | <code>(receivedMessage: <a href="#receivedmessage">ReceivedMessage</a>) =&gt; void</code> |
 
-**Returns:** <code>Promise&lt;<a href="#pluginlistenerhandle">PluginListenerHandle</a>&gt; & <a href="#pluginlistenerhandle">PluginListenerHandle</a></code>
+**Returns:** <code>any</code>
 
 **Since:** 0.1.0
 
@@ -134,18 +136,18 @@ Listen for when SMS is coming
 | **`isRegistered`** | <code>boolean</code> | Returns if register receiver started or not. | 0.1.0 |
 
 
-#### PluginListenerHandle
-
-| Prop         | Type                                      |
-| ------------ | ----------------------------------------- |
-| **`remove`** | <code>() =&gt; Promise&lt;void&gt;</code> |
-
-
 #### ReceivedMessage
 
 | Prop          | Type                | Description                | Since |
 | ------------- | ------------------- | -------------------------- | ----- |
 | **`message`** | <code>string</code> | Received message with hash | 0.1.0 |
 | **`error`**   | <code>string</code> | In case of any error       | 0.1.0 |
+
+
+#### PluginListenerHandle
+
+| Prop         | Type                      |
+| ------------ | ------------------------- |
+| **`remove`** | <code>() =&gt; any</code> |
 
 </docgen-api>
