@@ -1,0 +1,13 @@
+{
+  "appId": "com.dwlrathod.smsretriever.demo",
+  "appName": "SMSRetriever",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  },
+  "cordova": {}
+}

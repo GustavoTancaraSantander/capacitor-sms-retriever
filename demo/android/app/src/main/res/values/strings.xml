@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">SMSRetriever</string>
+    <string name="title_activity_main">SMSRetriever</string>
+    <string name="package_name">com.dwlrathod.smsretriever.demo</string>
+    <string name="custom_url_scheme">com.dwlrathod.smsretriever.demo</string>
+</resources>

@@ -1,0 +1,36 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Sms Retriever Demo
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+
+    <ion-item lines="none">
+      <ion-label>App Signature:</ion-label>
+      <ion-input [(ngModel)]="appSignature" placeholder="Click Generate App Signature"></ion-input>
+      <ion-button (click)="copySignature()" slot="end" fill="clear">
+        <ion-icon slot="icon-only" name="copy-outline"></ion-icon>
+      </ion-button>
+    </ion-item>
+    <ion-item class="no-padding" lines="none">
+      <ion-button slot="end" (click)="generateAppSignature()">Generate App Signature</ion-button>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-label>Phone Number:</ion-label>
+      <ion-input [(ngModel)]="phoneNumber" placeholder="Click Request Phone Number"></ion-input>
+    </ion-item>
+    <ion-item class="no-padding" lines="none">
+      <ion-button slot="end" (click)="requestPhoneNumber()">Request Phone Number</ion-button>
+    </ion-item>
+
+    <ion-item class="no-padding" lines="none">
+      <ion-button slot="end" (click)="startWatching()">Start Watching</ion-button>
+    </ion-item>
+
+  </ion-list>
+</ion-content>
