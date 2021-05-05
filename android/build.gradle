@@ -57,6 +57,4 @@ dependencies {
     androidTestImplementation "androidx.test.espresso:espresso-core:$androidxEspressoCoreVersion"
     implementation 'com.google.android.gms:play-services-auth:19.0.0'
     implementation 'com.google.android.gms:play-services-auth-api-phone:17.5.0'
-    implementation 'io.michaelrocks:libphonenumber-android:8.10.16'
-
 }
