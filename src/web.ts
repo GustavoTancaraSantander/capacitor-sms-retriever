@@ -1,10 +1,28 @@
 import { WebPlugin } from '@capacitor/core';
 
-import type { SmsRetrieverPlugin } from './definitions';
+import { AppSignature, HintPhoneNumber, RegisterReceiver, SmsRetrieverPlugin } from './definitions';
 
 export class SmsRetrieverWeb extends WebPlugin implements SmsRetrieverPlugin {
-  async echo(options: { value: string }): Promise<{ value: string }> {
-    console.log('ECHO', options);
-    return options;
+
+  getAppSignature(): Promise<AppSignature> {
+    this.throwUnsupportedError();
+  }
+
+  requestPhoneNumber(): Promise<HintPhoneNumber> {
+    this.throwUnsupportedError();
+  }
+
+  startSmsReceiver(): Promise<RegisterReceiver> {
+    this.throwUnsupportedError();
+  }
+
+  removeSmsReceiver(): Promise<void> {
+    this.throwUnsupportedError();
+  }
+
+  private throwUnsupportedError(): never {
+    throw this.unavailable(
+      'SMS retriever API not available in this browser.',
+    );
   }
 }

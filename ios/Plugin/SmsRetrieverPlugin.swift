@@ -7,12 +7,20 @@ import Capacitor
  */
 @objc(SmsRetrieverPlugin)
 public class SmsRetrieverPlugin: CAPPlugin {
-    private let implementation = SmsRetriever()
-
-    @objc func echo(_ call: CAPPluginCall) {
-        let value = call.getString("value") ?? ""
-        call.resolve([
-            "value": implementation.echo(value)
-        ])
+    
+    @objc func getAppSignature(_ call: CAPPluginCall) {
+        call.unimplemented()
+    }
+    
+    @objc func requestPhoneNumber(_ call: CAPPluginCall) {
+        call.unimplemented()
+    }
+    
+    @objc func startSmsReceiver(_ call: CAPPluginCall) {
+        call.unimplemented()
+    }
+    
+    @objc func removeSmsReceiver(_ call: CAPPluginCall) {
+        call.unimplemented()
     }
 }
