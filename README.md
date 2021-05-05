@@ -3,8 +3,8 @@
 Android SMS Retriever API for Capacitor.
 
 <img src="https://img.shields.io/npm/v/capacitor-sms-retriever" />
-<img src="https://img.shields.io/bower/l/capacitor-sms-retriever" />
-<img src="https://img.shields.io/amo/dw/capacitor-sms-retriever" />
+<img src="https://img.shields.io/npm/dm/capacitor-sms-retriever" />
+<img src="https://img.shields.io/npm/l/capacitor-sms-retriever" />
 
 ## Install
 
